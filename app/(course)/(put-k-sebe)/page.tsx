@@ -13,7 +13,7 @@ export default function Home() {
 		<main className="flex min-h-screen max-w-sm mx-auto flex-col p-5 gap-10">
 
 			<Image
-				src="/DSC04736.png"
+				src="/img-01.jpg"
 				alt="‌Диана Позднякова"
 				width={600}
 				height={400}
@@ -42,11 +42,19 @@ export default function Home() {
 
 			<BlockWhy />
 
-			<div className="border-t border-gray-200"></div>
+			<Image
+				src="/img-02.jpg"
+				alt="‌Диана Позднякова"
+				width={600}
+				height={400}
+				className="w-full h-auto"
+			/>
 
 			<BlockPlan />
 
 			<BlockThree />
+
+			<div className="border-t border-gray-200"></div>
 
 			<BlockMemory />
 
