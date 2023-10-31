@@ -40,7 +40,7 @@ export const BtnAction = ({ href, title, size = 'medium', block }: { href?: stri
 	return (
 		<Link
 			ref={ref}
-			href={href || 'https://t.me/psicho_di'}
+			href={href || 'https://t.me/soaring_seagull'}
 			className={className}
 			// aria-label="Записаться на курс"
 			// target="_blank"
