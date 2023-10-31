@@ -6,7 +6,7 @@ import clsx from 'clsx'
 
 type Size = 'small' | 'medium' | 'large';
 
-export const BtnAction = ({ href, title, size = 'medium', block }: { href: string, title: string, size?: Size, block?: boolean }) => {
+export const BtnAction = ({ href, title, size = 'medium', block }: { href?: string, title: string, size?: Size, block?: boolean }) => {
 
 	const ref = useRef<HTMLAnchorElement>(null)
 
