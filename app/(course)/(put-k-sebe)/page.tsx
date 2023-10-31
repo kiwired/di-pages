@@ -1,4 +1,4 @@
-import { SparklesIcon, TrophyIcon, UsersIcon } from "@heroicons/react/20/solid";
+import type { Metadata } from "next";
 import Image from "next/image"
 import { BtnAction } from "./btn-action";
 
@@ -7,6 +7,25 @@ import { BlockTarget } from "./block-target";
 import { BlockWhy } from "./block-why";
 import { BlockPlan } from "./block-plan";
 import { BlockMemory } from "./block-memory";
+
+
+export const metadata: Metadata = {
+	metadataBase: new URL('https://di.wishoy.com/'),
+	title: 'Путь к себе - Авторский курс ‌Дианы Поздняковой',
+	description: 'Улучши отношения с собой ‌за 3 недели',
+	authors: {
+		url: 'https://t.me/psicho_di',
+		name: 'Диана Позднякова',
+	},
+	openGraph: {
+		title: 'Путь к себе - Авторский курс ‌Дианы Поздняковой',
+		description: 'Улучши отношения с собой ‌за 3 недели',
+		siteName: '‌Психолог Диана Позднякова',
+		images: [
+			'/img-01.jpg'
+		]
+	}
+}
 
 export default function Home() {
 	return (
