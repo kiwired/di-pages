@@ -1,25 +1,26 @@
 import type { Metadata } from 'next'
-import { Montserrat, Roboto } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import './globals.css'
-
-// const roboto = Roboto({
-//   weight: ['400'],
-//   subsets: ['cyrillic']
-// })
 
 const monsterat = Montserrat({
   weight: ['300', '400', '600', '700'],
   subsets: ['cyrillic']
 })
 
-// const cormorant = Cormorant_Garamond({
-//   weight: ['400', '600'],
-//   subsets: ['cyrillic']
-// })
-
 export const metadata: Metadata = {
-  title: 'Путь к себе - Авторский курс ‌Дианы Поздняковой',
-  description: 'Улучши отношения с собой ‌за 3 недели',
+  metadataBase: new URL('https://di.wishoy.com/'),
+  title: 'Диана Позднякова - психолог, гештальт—терапевт',
+  // description: '',
+  authors: {
+    url: 'https://t.me/psicho_di',
+    name: 'Диана Позднякова',
+  },
+  openGraph: {
+    title: 'Диана Позднякова - психолог, гештальт—терапевт',
+    description: '',
+    siteName: 'Диана Позднякова - психолог, гештальт—терапевт',
+    images: ['/img-01.jpg'],
+  },
 }
 
 export default function RootLayout({
@@ -28,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body className={monsterat.className}>{children}</body>
     </html>
   )
