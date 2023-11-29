@@ -2,9 +2,10 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
-import { ArrowDownIcon, BoltIcon, CalendarIcon, HeartIcon, InformationCircleIcon, CheckIcon, SunIcon, PaperAirplaneIcon, PencilSquareIcon, RocketLaunchIcon, Battery50Icon, CheckBadgeIcon, CheckCircleIcon, ExclamationTriangleIcon } from '@heroicons/react/20/solid'
+import { BoltIcon, CalendarIcon, HeartIcon, InformationCircleIcon, CheckIcon, SunIcon, PaperAirplaneIcon, PencilSquareIcon, RocketLaunchIcon, Battery50Icon, CheckBadgeIcon, CheckCircleIcon, ExclamationTriangleIcon } from '@heroicons/react/20/solid'
 import { StarIcon } from '@heroicons/react/24/outline'
 import { Divider, List, Text } from '@/ui'
+import { Btn } from './btn'
 
 export const metadata: Metadata = {
 	title: 'Предновогодний курс «Меняйся»',
@@ -52,12 +53,7 @@ export default function ChangePage() {
 			</Text>
 
 			<Text as='p' alignment='center'>
-				<Link
-					className='inline-flex items-center justify-center gap-2 px-10 py-3 rounded bg-blue-400 font-semibold uppercase text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500'
-					href='#programm'
-				>
-					Программа <ArrowDownIcon className='animate-bounce h-5 w-5' />
-				</Link>
+				<Btn />
 			</Text>
 
 			<Divider />
@@ -182,7 +178,7 @@ export default function ChangePage() {
 
 			<Divider />
 
-			<Text as='h2' variant='heading2xl'>
+			<Text id='programm' as='h2' variant='heading2xl'>
 				Программа:
 			</Text>
 
