@@ -25,18 +25,18 @@ export default function ChangePage() {
 			/>
 
 			<div className="text-center">
-				<p className="text-base font-semibold text-blue-400">
-					Предновогодний курс
-				</p>
-				<h1 className="mt-2 text-4xl tracking-tight text-gray-800">
-					<span className="text-2xl text-gray-500">«</span>
-					<strong className="font-bold">Меняйся</strong>
-					<span className="text-2xl font-normal text-gray-500">»</span>
-				</h1>
 				<div className="flex items-center justify-center gap-2 mt-2">
 					<CalendarIcon className="h-5 w-5 text-blue-400" />
 					<Text as="span">с 4 по 24 декабря</Text>
 				</div>
+				<h1 className="mt-2 text-4xl tracking-tight text-gray-700">
+					<span className="text-2xl text-gray-500">«</span>
+					<strong className="font-bold text-gray-800">Меняйся</strong>
+					<span className="text-2xl font-normal text-gray-500">»</span>
+				</h1>
+				<p className="mt-2 text-lg font-semibold text-blue-400">
+					Предновогодний курс
+				</p>
 			</div>
 
 			<Image
@@ -48,7 +48,7 @@ export default function ChangePage() {
 			/>
 
 			<Text as='p' alignment='center'>
-				Курс для тех, кто устал от сухой теории и хочет пойти в реальную психологическую практику
+				Курс для тех, кто устал от сухой теории и хочет пойти в реальную психологическую практику
 			</Text>
 
 			<Text as='p' alignment='center'>
@@ -77,7 +77,9 @@ export default function ChangePage() {
 				</List.Item>
 				<List.Item>
 					<PencilSquareIcon className='mt-1 h-5 w-5 flex-none text-blue-400' aria-hidden='true' />
-					кто хочет получить конкретные техники, которые улучшат вашу жизнь, без обращения к психологу
+					<Text as="span">
+						кто хочет получить <Text as="strong" fontWeight="semibold">конкретные техники</Text>, которые улучшат вашу жизнь, без обращения к психологу
+					</Text>
 				</List.Item>
 			</List>
 
@@ -175,7 +177,7 @@ export default function ChangePage() {
 			</Text>
 			
 			<Text as='p'>
-				Вместе мы будем учиться слушать и слышать себя, работать над репродуктивными стратегиями вашего поведения и учиться выстраивать отношения с собой и миром по-новому!
+				Вместе мы будем учиться слушать и слышать себя, работать над непродуктивными стратегиями вашего поведения и учиться выстраивать отношения с собой и миром по-новому!
 			</Text>
 
 			<Divider />
@@ -234,7 +236,7 @@ export default function ChangePage() {
 					'mt-10': key === 0,
 				})}>
 					{key === 0 && (
-						<div className="absolute top-2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-52">
+						<div className="absolute top-4 -ml-4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-52">
 							<Image
 								src='/best-seller.svg'
 								alt='Идеально для подарка'
@@ -247,12 +249,14 @@ export default function ChangePage() {
 					<Text as='h3' variant='heading2xl' fontWeight='semibold' alignment='center'>
 						{val.title}
 					</Text>
+					<div className="mt-3 mb-1 w-full">
+						<Text as='p'>
+							{val.text}
+						</Text>
+					</div>
 					<Text as='h3' variant='heading3xl' fontWeight='bold' alignment='center'>
 						{val.price} <Text as='span' variant='heading2xl' fontWeight='semibold'>₽</Text>
 					</Text>
-					<div className="mt-3 w-full">
-						{val.text}
-					</div>
 					<Link
 						className='inline-flex items-center gap-x-3 mt-3 rounded text-center px-10 py-3 bg-blue-400 leading-4 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400'
 						href='https://t.me/soaring_seagull'
@@ -271,7 +275,7 @@ export default function ChangePage() {
 
 			{faqs.map((item, k) => {
 				return (
-					<details key={k} className="group marker:content-['']">
+					<details key={k} className="block group marker:content-['']">
 						<summary className='flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-blue-400 [&amp;::-webkit-details-marker]:hidden'>
 							{item.name}
 							<svg
@@ -378,7 +382,7 @@ const plans = [
 				</List.Item>
 				<List.Item>
 					<CheckBadgeIcon className='mt-1 h-5 w-5 flex-none text-blue-400' aria-hidden='true' />
-					личное куратство в переписк
+					личное кураторство в переписке
 				</List.Item>
 			</List>
 		)
