@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer components {
 	.bg-papper-gradient {
-		--papper-gradient-color: rgba(209, 213, 219, 0.1);
+		--papper-gradient-color: rgba(255, 255, 255, 0.3);
 		--papper-gradient: conic-gradient(at 1px calc(100% - 1px), transparent 90deg, var(--papper-gradient-color) 0%) 0 0/;
-		background: var(--papper-gradient) 3rem 3rem, var(--papper-gradient) 1rem 1rem, linear-gradient(#fafafa, #f4f4f5, #fafafa);
+		background: var(--papper-gradient) 3rem 3rem, var(--papper-gradient) 1rem 1rem, linear-gradient(theme(colors.stone.50), theme(colors.stone.100), theme(colors.stone.50));
 	}
 }
