@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
-import { BoltIcon, CalendarIcon, HeartIcon, InformationCircleIcon, CheckIcon, SunIcon, PaperAirplaneIcon, PencilSquareIcon, RocketLaunchIcon, Battery50Icon, CheckBadgeIcon, CheckCircleIcon, ExclamationTriangleIcon, MinusIcon, DocumentTextIcon, PuzzlePieceIcon } from '@heroicons/react/20/solid'
+import { BoltIcon, CalendarIcon, HeartIcon, InformationCircleIcon, CheckIcon, SunIcon, PaperAirplaneIcon, PencilSquareIcon, RocketLaunchIcon, Battery50Icon, CheckBadgeIcon, CheckCircleIcon, ExclamationTriangleIcon, DocumentTextIcon, PuzzlePieceIcon } from '@heroicons/react/20/solid'
 import { StarIcon } from '@heroicons/react/24/outline'
 import { Divider, List, Text } from '@/ui'
 import { Btn } from './btn'
@@ -145,28 +145,32 @@ export default function ChangePage() {
 				</Text>
 
 				<div className="relative flex flex-col gap-7">
-					<div className="absolute top-0 left-3 w-0.5 h-full bg-blue-400"></div>
-					<div className="relative flex">
-						<div className="flex gap-3">
-							<CheckIcon className='h-7 w-7 p-1 flex-none rounded-full bg-blue-400 text-white' aria-hidden='true' />
-							внутренний критик
-						</div>
-					</div>
-					<div className="relative flex ">
-						<div className="absolute top-0 left-2 w-2 h-full"></div>
-						<div className="flex gap-3">
-							<CheckIcon className='h-7 w-7 p-1 flex-none rounded-full border-2 border-blue-400 border-spacing-2 bg-white text-blue-400' aria-hidden='true' />
-							контакт с собой
-						</div>
-					</div>
-					<div className="relative flex ">
-						<div className="absolute top-0 left-2 w-2 h-full"></div>
-						<div className="flex gap-3">
-							<CheckIcon className='h-7 w-7 p-1 flex-none rounded-full border-2 border-blue-400 border-spacing-2 bg-white text-blue-400' aria-hidden='true' />
-							зона комфорта
-						</div>
-					</div>
-
+					<div className="absolute top-0 left-4 -ml-0.5 w-0.5 h-full bg-blue-400"></div>
+					{features.map((val, key) => {
+						return (
+							<details key={key} className="relative block group marker:content-['']" open={key === 0}>
+								<summary className='flex items-center gap-3 cursor-pointer select-none group-open:text-blue-400 [&amp;::-webkit-details-marker]:hidden'>
+									<svg
+										className='h-7 w-7 rounded-full flex-none border-2 border-blue-400 border-spacing-2 bg-white stroke-blue-500 group-open:stroke-white group-open:bg-blue-400'
+										fill='none'
+										xmlns='http://www.w3.org/2000/svg'
+										strokeWidth='2'
+										strokeLinecap='round'
+										strokeLinejoin='round'
+									>
+										<path d='M18 12H6' />
+										<path className='group-open:hidden' d='M12 6v12' />
+									</svg>
+									{val.name}
+								</summary>
+								<div className='pl-10 pt-6'>
+									<div className='prose prose-slate max-w-none flex flex-col gap-3 prose-a:font-semibold prose-a:text-blue-400 hover:prose-a:text-blue-500'>
+										{val.text}
+									</div>
+								</div>
+							</details>
+						)
+					})}
 				</div>
 
 				<Text as='p'>
@@ -233,25 +237,30 @@ export default function ChangePage() {
 			</Text>
 
 			{plans.map((val, key) => (
-				<div key={key} className={clsx('relative flex flex-col items-center gap-3 px-7 py-7 bg-gray-50 border border-gray-100 rounded-lg', {
-					'mt-10': key === 0,
+				<div key={key} className={clsx('relative flex flex-col items-center gap-3 px-7 py-7 bg-gray-50 border border-gray-100 rounded-lg bg-papper-gradient', {
+					'mt-14': key === 0,
 				})}>
 					{key === 0 && (
-						<div className="absolute top-4 -ml-4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-52">
+						<div className="absolute z-10 bottom-full -left-6 w-32 translate-y-20">
 							<Image
-								src='/best-seller.svg'
+								src='/best-seller.png'
 								alt='Идеально для подарка'
-								width={211}
-								height={118}
+								width={152}
+								height={143}
 								className='w-auto h-auto'
 							/>
 						</div>
 					)}
+
+					<div className="absolute bottom-full left-1/2 -translate-x-1/2 translate-y-1/2 w-auto px-5 whitespace-nowrap text-sm rounded-full border border-gray-200 bg-gray-100 text-gray-800">
+						{val.hint}
+					</div>
+
 					<Text as='h3' variant='heading2xl' fontWeight='semibold' alignment='center'>
 						{val.title}
 					</Text>
 					<div className="mt-3 mb-1 w-full">
-						<Text as='p'>
+						<Text as='legend'>
 							{val.text}
 						</Text>
 					</div>
@@ -314,6 +323,7 @@ export default function ChangePage() {
 const plans = [
 	{
 		title: 'Я сам',
+		hint: 'Самостоятельный тариф',
 		price: '3 200',
 		text: (
 			<List gap='extraTight'>
@@ -334,6 +344,7 @@ const plans = [
 	},
 	{
 		title: 'Вместе',
+		hint: 'Групповой тариф',
 		price: '6 299',
 		text: (
 			<List gap='extraTight'>
@@ -358,6 +369,7 @@ const plans = [
 	},
 	{
 		title: 'Глубина',
+		hint: 'Индивидуальный тариф',
 		price: '8 650',
 		text: (
 			<List gap='extraTight'>
@@ -397,7 +409,7 @@ const three = [
 		content: (
 			<>
 				<ul className="grid cols-span-1 gap-y-2">
-					<li className="flex items-start gap-4">
+					{/* <li className="flex items-start gap-4">
 						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Поговорим о негативных установках и мыслях, саботаже, вредных стратегиях</Text>
 					</li>
@@ -412,7 +424,7 @@ const three = [
 					<li className="flex items-start gap-4">
 						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Станем увереннее, сильнее, решительнее</Text>
-					</li>
+					</li> */}
 					<li className="flex items-start gap-4">
 						<DocumentTextIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Лекция: Как устроен внутренний критик</Text>
@@ -435,7 +447,7 @@ const three = [
 		content: (
 			<>
 				<ul className="grid cols-span-1 gap-y-2">
-					<li className="flex items-start gap-4">
+					{/* <li className="flex items-start gap-4">
 						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Поговорим о чувствах и телесном проживании эмоций, про контроль и про то, что лишает вас энергии в жизни, про влияние вашего прошлого на ваше настоящее и что с этим делать</Text>
 					</li>
@@ -450,7 +462,7 @@ const three = [
 					<li className="flex items-start gap-4">
 						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Улучшим контракт с собой и внешним миром</Text>
-					</li>
+					</li> */}
 					<li className="flex items-start gap-4">
 						<DocumentTextIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Лекция: Состаляющие контакта с собой: чувства, мысли, тело</Text>
@@ -473,7 +485,7 @@ const three = [
 		content: (
 			<>
 				<ul className="grid cols-span-1 gap-y-2">
-					<li className="flex items-start gap-4">
+					{/* <li className="flex items-start gap-4">
 						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Поговорим о зоне комфорта, внутренних ценностях и о том, что мешает вам совершать новые действия и идти в новый опыт</Text>
 					</li>
@@ -488,7 +500,7 @@ const three = [
 					<li className="flex items-start gap-4">
 						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Попробуем пойти в новый опыт и начнем жить эту жизнь ИНАЧЕ!</Text>
-					</li>
+					</li> */}
 					<li className="flex items-start gap-4">
 						<DocumentTextIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Лекция: Расскрывая в себе любопытного ребенка</Text>
@@ -507,6 +519,74 @@ const three = [
 	},
 ]
 
+
+const features = [
+	{
+		name: 'Внутренний критик',
+		text: (
+			<ul className='flex flex-col gap-2'>
+				<li className='flex gap-2'>
+					<CheckIcon className="mt-1 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+					<Text as='p'>поговорим о негативных установках и вреде позитивного мышления, о том, как мы саботируем себя</Text>
+				</li>
+				<li className='flex gap-2'>
+					<CheckIcon className="mt-1 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+					<Text as='p'>сделаем 3 практики на проработку внутреннего критика</Text>
+				</li>
+				<li className='flex gap-2'>
+					<CheckIcon className="mt-1 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+					<Text as='p'>освободимся от множества страхов, тревоги и сомнений</Text>
+				</li>
+			</ul>
+		),
+	},
+	{
+		name: 'Контакт с собой',
+		text: (
+			<ul className='flex flex-col gap-2'>
+				<li className='flex gap-2'>
+					<CheckIcon className="mt-1 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+					<Text as='p'>поговорим о чувствах и телесном проживании эмоций, про контроль и про то, что лишает вас энергии в жизни, про влияние вашего прошлого на ваше настоящее и что с этим делать</Text>
+				</li>
+				<li className='flex gap-2'>
+					<CheckIcon className="mt-1 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+					<Text as='p'>сделаем 3 практики на улучшие контакта с собой, своими чувствами и телом</Text>
+				</li>
+				<li className='flex gap-2'>
+					<CheckIcon className="mt-1 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+					<Text as='p'>каждый день будем вести трекер эмоциоального состояния</Text>
+				</li>
+				<li className='flex gap-2'>
+					<CheckIcon className="mt-1 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+					<Text as='p'>обретем навык здорового отношения к своим эмоциям</Text>
+				</li>
+			</ul>
+		),
+	},
+	{
+		name: 'Зона комфорта',
+		text: (
+			<ul className='flex flex-col gap-2'>
+				<li className='flex gap-2'>
+					<CheckIcon className="mt-1 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+					<Text as='p'>поговорим о зоне комфорта, о том, что нас останавливает на пути к целям, о нашем внутреннем ребенке</Text>
+				</li>
+				<li className='flex gap-2'>
+					<CheckIcon className="mt-1 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+					<Text as='p'>научимся работать со своими внутренними преградами на пути к счастью</Text>
+				</li>
+				<li className='flex gap-2'>
+					<CheckIcon className="mt-1 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+					<Text as='p'>выполним 3 техники для прокачки внутренней силы</Text>
+				</li>
+				<li className='flex gap-2'>
+					<CheckIcon className="mt-1 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+					<Text as='p'>будем учиться ошибаться и быть неидеальными</Text>
+				</li>
+			</ul>
+		),
+	},
+]
 
 const faqs = [
 	{
