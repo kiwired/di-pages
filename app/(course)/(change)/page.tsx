@@ -149,7 +149,7 @@ export default function ChangePage() {
 				<div className="relative flex">
 					<div className="flex gap-3">
 						<CheckIcon className='h-7 w-7 p-1 flex-none rounded-full bg-blue-400 text-white' aria-hidden='true' />
-						негативные мысли
+						внутренний критик
 					</div>
 				</div>
 				<div className="relative flex ">
