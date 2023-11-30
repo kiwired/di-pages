@@ -241,12 +241,12 @@ export default function ChangePage() {
 					'mt-14': key === 0,
 				})}>
 					{key === 0 && (
-						<div className="absolute z-10 bottom-full -left-6 w-32 translate-y-20">
+						<div className="absolute z-10 bottom-full -left-5 w-32 translate-y-20">
 							<Image
 								src='/best-seller.png'
 								alt='Идеально для подарка'
-								width={152}
-								height={143}
+								width={148}
+								height={148}
 								className='w-auto h-auto'
 							/>
 						</div>
