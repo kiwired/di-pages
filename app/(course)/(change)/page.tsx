@@ -59,7 +59,7 @@ export default function ChangePage() {
 			<Divider />
 
 			<Text as='h2' variant='heading2xl'>
-				Для для тех
+				Для тех
 			</Text>
 
 			<List>
@@ -134,54 +134,54 @@ export default function ChangePage() {
 				</List.Item>
 			</List>
 
-			<Divider />
+			<div className="bg-papper-gradient flex flex-col gap-7 my-3 -mx-5 py-10 px-7">
 
-			<Text as='h2' variant='heading2xl'>
-				Суть курса:
-			</Text>
+				<Text as='h2' variant='heading2xl'>
+					Суть курса:
+				</Text>
 
-			<Text as='p'>
-				Курс будет длится 3 недели. За это время мы погрузимся в три основные темы: 
-			</Text>
+				<Text as='p'>
+					Курс будет длиться 3 недели. За это время мы погрузимся в три основные темы:
+				</Text>
 
-			<div className="relative flex flex-col gap-7">
-				<div className="absolute top-0 left-3 w-0.5 h-full bg-blue-400"></div>
-				<div className="relative flex">
-					<div className="flex gap-3">
-						<CheckIcon className='h-7 w-7 p-1 flex-none rounded-full bg-blue-400 text-white' aria-hidden='true' />
-						внутренний критик
+				<div className="relative flex flex-col gap-7">
+					<div className="absolute top-0 left-3 w-0.5 h-full bg-blue-400"></div>
+					<div className="relative flex">
+						<div className="flex gap-3">
+							<CheckIcon className='h-7 w-7 p-1 flex-none rounded-full bg-blue-400 text-white' aria-hidden='true' />
+							внутренний критик
+						</div>
 					</div>
-				</div>
-				<div className="relative flex ">
-					<div className="absolute top-0 left-2 w-2 h-full"></div>
-					<div className="flex gap-3">
-						<CheckIcon className='h-7 w-7 p-1 flex-none rounded-full border-2 border-blue-400 border-spacing-2 bg-white text-blue-400' aria-hidden='true' />
-						контакт с собой
+					<div className="relative flex ">
+						<div className="absolute top-0 left-2 w-2 h-full"></div>
+						<div className="flex gap-3">
+							<CheckIcon className='h-7 w-7 p-1 flex-none rounded-full border-2 border-blue-400 border-spacing-2 bg-white text-blue-400' aria-hidden='true' />
+							контакт с собой
+						</div>
 					</div>
-				</div>
-				<div className="relative flex ">
-					<div className="absolute top-0 left-2 w-2 h-full"></div>
-					<div className="flex gap-3">
-						<CheckIcon className='h-7 w-7 p-1 flex-none rounded-full border-2 border-blue-400 border-spacing-2 bg-white text-blue-400' aria-hidden='true' />
-						зона комфорта
+					<div className="relative flex ">
+						<div className="absolute top-0 left-2 w-2 h-full"></div>
+						<div className="flex gap-3">
+							<CheckIcon className='h-7 w-7 p-1 flex-none rounded-full border-2 border-blue-400 border-spacing-2 bg-white text-blue-400' aria-hidden='true' />
+							зона комфорта
+						</div>
 					</div>
+
 				</div>
+
+				<Text as='p'>
+					На каждую тему предусмотрено 2 лекции и 3 практики.
+				</Text>
+				
+				<Text as='p'>
+					Это будет максимально глубокий и практический курс с техниками и практиками из гештальт-терапии и АСТ-терапии.
+				</Text>
+				
+				<Text as='p'>
+					Вместе мы будем учиться слушать и слышать себя, работать над непродуктивными стратегиями вашего поведения и учиться выстраивать отношения с собой и миром по-новому!
+				</Text>
 
 			</div>
-
-			<Text as='p'>
-				На каждую тему предусмотрено 2 лекции и 3 практики.
-			</Text>
-			
-			<Text as='p'>
-				Это будет максимально глубокий и практический курс с техниками и практиками из гештальт-терапии и АСТ-терапии.
-			</Text>
-			
-			<Text as='p'>
-				Вместе мы будем учиться слушать и слышать себя, работать над непродуктивными стратегиями вашего поведения и учиться выстраивать отношения с собой и миром по-новому!
-			</Text>
-
-			<Divider />
 
 			<Text id='programm' as='h2' variant='heading2xl'>
 				Программа:
