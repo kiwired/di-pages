@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
-import { BoltIcon, CalendarIcon, HeartIcon, InformationCircleIcon, CheckIcon, SunIcon, PaperAirplaneIcon, PencilSquareIcon, RocketLaunchIcon, Battery50Icon, CheckBadgeIcon, CheckCircleIcon, ExclamationTriangleIcon } from '@heroicons/react/20/solid'
+import { BoltIcon, CalendarIcon, HeartIcon, InformationCircleIcon, CheckIcon, SunIcon, PaperAirplaneIcon, PencilSquareIcon, RocketLaunchIcon, Battery50Icon, CheckBadgeIcon, CheckCircleIcon, ExclamationTriangleIcon, MinusIcon, DocumentTextIcon, PuzzlePieceIcon } from '@heroicons/react/20/solid'
 import { StarIcon } from '@heroicons/react/24/outline'
 import { Divider, List, Text } from '@/ui'
 import { Btn } from './btn'
@@ -108,6 +108,11 @@ export default function ChangePage() {
 				</div>
 			</div>
 
+
+			<Text as='p' alignment='center'>
+				<Btn content='Выбрать тариф' target='#plans' />
+			</Text>
+
 			<Divider />
 
 			<Text as='h2' variant='heading2xl'>
@@ -196,14 +201,14 @@ export default function ChangePage() {
 
 			<dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10">
 				{three.map((val, key) => (
-					<div key={key} className="relative pl-16">
-						<dt className="text-base leading-7 text-blue-400">
-							<div className="absolute left-0 top-0 flex h-10 w-10 items-start justify-center rounded-lg bg-blue-400">
+					<div key={key} className="">
+						<dt className="flex items-center gap-3">
+							<div className="flex h-10 w-10 items-start justify-center rounded-lg bg-blue-400">
 								<val.icon className="h-6 w-6 text-white mt-2" aria-hidden="true" />
 							</div>
-							{val.name}
+							<Text as='p' tone='blue'>{val.name}</Text>
 						</dt>
-						<dd className="mt-2 text-base leading-7 text-gray-800">
+						<dd className="mt-4 text-base">
 							{val.content}
 						</dd>
 					</div>
@@ -211,19 +216,19 @@ export default function ChangePage() {
 			</dl>
 
 			<Text as='p'>
-				По итогу вы получите 15 видеоматериалов + рабочую тетрадь со всеми конспектами и техниками!
+				По итогу вы получите 15 видеоматериалов + рабочую тетрадь со всеми конспектами и техниками!
 			</Text>
 
 			<div className="flex gap-3 -mx-5 px-5 py-5 bg-blue-50 text-blue-400">
 				<InformationCircleIcon className="h-6 w-6 flex-none text-blue-400" />
 				<div className="">
-					Для тарифа «Стандарт» и «PRO» предусмотрен заключительный созвон на тему: «Анализируем прошлый год и ставим цели на новый!»
+					Для тарифа «Вместе» и «Глубина» предусмотрен заключительный созвон на тему: «Анализируем прошлый год и ставим цели на новый!»
 				</div>
 			</div>
 
 			<Divider />
 
-			<Text as='h2' variant='heading2xl' alignment='center'>
+			<Text id='plans' as='h2' variant='heading2xl' alignment='center'>
 				Форматы участия:
 			</Text>
 
@@ -308,7 +313,7 @@ export default function ChangePage() {
 
 const plans = [
 	{
-		title: 'Базовый',
+		title: 'Я сам',
 		price: '3 200',
 		text: (
 			<List gap='extraTight'>
@@ -328,7 +333,7 @@ const plans = [
 		)
 	},
 	{
-		title: 'Стандарт',
+		title: 'Вместе',
 		price: '6 299',
 		text: (
 			<List gap='extraTight'>
@@ -352,7 +357,7 @@ const plans = [
 		)
 	},
 	{
-		title: 'PRO',
+		title: 'Глубина',
 		price: '8 650',
 		text: (
 			<List gap='extraTight'>
@@ -391,14 +396,33 @@ const three = [
 		icon: HeartIcon,
 		content: (
 			<>
-				<ul className="grid cols-span-1 gap-y-1">
-					<li className="flex items-start gap-2">
+				<ul className="grid cols-span-1 gap-y-2">
+					<li className="flex items-start gap-4">
+						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+						<Text as='span'>Поговорим о негативных установках и мыслях, саботаже, вредных стратегиях</Text>
+					</li>
+					<li className="flex items-start gap-4">
+						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+						<Text as='span'>Научимся адекватно работать с внутренним критиком</Text>
+					</li>
+					<li className="flex items-start gap-4">
+						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+						<Text as='span'>Освободимся от множества страхов, тревоги и сомнений</Text>
+					</li>
+					<li className="flex items-start gap-4">
+						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+						<Text as='span'>Станем увереннее, сильнее, решительнее</Text>
+					</li>
+					<li className="flex items-start gap-4">
+						<DocumentTextIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Лекция: Как устроен внутренний критик</Text>
 					</li>
-					<li className="flex items-start gap-2">
+					<li className="flex items-start gap-4">
+						<DocumentTextIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Лекция: Я — это не ярлык: наши мысли о себе</Text>
 					</li>
-					<li className="flex items-start gap-2">
+					<li className="flex items-start gap-4">
+						<PuzzlePieceIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Три практики</Text>
 					</li>
 				</ul>
@@ -410,14 +434,33 @@ const three = [
 		icon: SunIcon,
 		content: (
 			<>
-				<ul className="grid cols-span-1 gap-y-1">
-					<li className="flex items-start gap-2">
+				<ul className="grid cols-span-1 gap-y-2">
+					<li className="flex items-start gap-4">
+						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+						<Text as='span'>Поговорим о чувствах и телесном проживании эмоций, про контроль и про то, что лишает вас энергии в жизни, про влияние вашего прошлого на ваше настоящее и что с этим делать</Text>
+					</li>
+					<li className="flex items-start gap-4">
+						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+						<Text as='span'>Научимся замечать свои чувства и повысим телесную чувствительность</Text>
+					</li>
+					<li className="flex items-start gap-4">
+						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+						<Text as='span'>Обретем навык здорового отношения к своим эмоциям</Text>
+					</li>
+					<li className="flex items-start gap-4">
+						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+						<Text as='span'>Улучшим контракт с собой и внешним миром</Text>
+					</li>
+					<li className="flex items-start gap-4">
+						<DocumentTextIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Лекция: Состаляющие контакта с собой: чувства, мысли, тело</Text>
 					</li>
-					<li className="flex items-start gap-2">
+					<li className="flex items-start gap-4">
+						<DocumentTextIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Лекция: Как наше детство влияет на наш контакт с собой</Text>
 					</li>
-					<li className="flex items-start gap-2">
+					<li className="flex items-start gap-4">
+						<PuzzlePieceIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Три практики</Text>
 					</li>
 				</ul>
@@ -429,14 +472,33 @@ const three = [
 		icon: BoltIcon,
 		content: (
 			<>
-				<ul className="grid cols-span-1 gap-y-1">
-					<li className="flex items-start gap-2">
+				<ul className="grid cols-span-1 gap-y-2">
+					<li className="flex items-start gap-4">
+						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+						<Text as='span'>Поговорим о зоне комфорта, внутренних ценностях и о том, что мешает вам совершать новые действия и идти в новый опыт</Text>
+					</li>
+					<li className="flex items-start gap-4">
+						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+						<Text as='span'>Научимся работать со своими внутренними преградами на пути к счастью</Text>
+					</li>
+					<li className="flex items-start gap-4">
+						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+						<Text as='span'>Узнаем свои истинные желания</Text>
+					</li>
+					<li className="flex items-start gap-4">
+						<MinusIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+						<Text as='span'>Попробуем пойти в новый опыт и начнем жить эту жизнь ИНАЧЕ!</Text>
+					</li>
+					<li className="flex items-start gap-4">
+						<DocumentTextIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Лекция: Расскрывая в себе любопытного ребенка</Text>
 					</li>
-					<li className="flex items-start gap-2">
+					<li className="flex items-start gap-4">
+						<DocumentTextIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Лекция: Хочу, но не хочу: что нас останавливает от лучшей жизни</Text>
 					</li>
-					<li className="flex items-start gap-2">
+					<li className="flex items-start gap-4">
+						<PuzzlePieceIcon className="mt-1 mx-2 h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 						<Text as='span'>Три практики</Text>
 					</li>
 				</ul>
@@ -451,7 +513,7 @@ const faqs = [
 		name: 'Это полностью онлайн формат?',
 		text: (
 			<Text as='p'>
-				Да, курс проходит онлайн в телеграмме. Однако, если вы из Калининграда и приобретаете тариф «PRO», то возможна личная встреча в кафе
+				Да, курс проходит онлайн в телеграмме. Однако, если вы из Калининграда и приобретаете тариф «Глубина», то возможна личная встреча в кафе
 			</Text>
 		),
 	},
@@ -464,8 +526,8 @@ const faqs = [
 				</Text>
 				<List gap='extraTight'>
 					<List.Item>При базовом тарифе вы сами выполняете все задания.</List.Item>
-					<List.Item>При тарифе «Стандарт» у вас есть общий чат, в котором можно задавать вопросы и делиться своей домашней работой.</List.Item>
-					<List.Item>При тарифе «PRO» вы находитесь на личном сопровождении с психологом, который помогает, дораскручивает и дополнительно объясняет.</List.Item>
+					<List.Item>При тарифе «Вместе» у вас есть общий чат, в котором можно задавать вопросы и делиться своей домашней работой.</List.Item>
+					<List.Item>При тарифе «Глубина» вы находитесь на личном сопровождении с психологом, который помогает, дораскручивает и дополнительно объясняет.</List.Item>
 				</List>
 			</>
 		),

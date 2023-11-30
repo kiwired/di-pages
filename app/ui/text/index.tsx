@@ -30,7 +30,7 @@ type Alignment = 'start' | 'center' | 'end' | 'justify'
 
 type FontWeight = 'regular' | 'medium' | 'semibold' | 'bold'
 
-type Tone = 'indigo' | 'cyan' | 'subdued'
+type Tone = 'indigo' | 'blue' | 'cyan' | 'subdued'
 
 type TextDecorationLine = 'line-through'
 
@@ -92,6 +92,7 @@ export const Text = ({
 		'text-gray-500': tone == 'subdued',
 		'text-indigo-500': tone == 'indigo',
 		'text-cyan-500': tone == 'cyan',
+		'text-blue-500': tone == 'blue',
 
 		'text-center': alignment == 'center',
 
