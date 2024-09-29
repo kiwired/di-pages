@@ -182,7 +182,7 @@ export default function HomePage() {
 					</div>
 				</div>
 
-				<Text as='p' variant='bodyXs' tone='subdued'>
+				<Text as='p' tone='subdued'>
 					Длительность консультации:{' '}
 					<Text as='strong' fontWeight='semibold' tone='subdued'>
 						60 минут
