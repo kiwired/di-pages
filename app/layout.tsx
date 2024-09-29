@@ -8,7 +8,7 @@ const monsterat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://di.wishoy.com/'),
+  metadataBase: new URL('http://baltikpsy.ru/'),
   title: 'Диана Позднякова - психолог, гештальт—терапевт',
   // description: '',
   authors: {

@@ -10,7 +10,7 @@ import { BlockMemory } from "./block-memory";
 
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://di.wishoy.com/'),
+	metadataBase: new URL('http://baltikpsy.ru/'),
 	title: 'Путь к себе - Авторский курс ‌Дианы Поздняковой',
 	description: 'Улучши отношения с собой ‌за 3 недели',
 	authors: {

@@ -6,7 +6,7 @@ import { Divider, List, Text } from '@/ui'
 import { BtnAction } from './btn-action'
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://di.wishoy.com/'),
+	metadataBase: new URL('https://baltikpsy.ru/'),
 	title: 'Диана Позднякова - психолог, гештальт—терапевт',
 	description: '',
 	authors: {
