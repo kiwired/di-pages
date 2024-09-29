@@ -40,13 +40,13 @@ export default function HomePage() {
 					</div>
 				</div>
 
-				<div className="mt-5 px-10">
+				<div className="px-10">
 					<svg className='w-10 h-10' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" version="1.1">
 						<path d="M11.86,16.55a4.31,4.31,0,0,0-2.11.56,14.44,14.44,0,0,1,4.36-6,1.1,1.1,0,0,0-1.4-1.7c-4,3.25-5.78,7.75-5.78,10.54A5.08,5.08,0,0,0,10,24.58a4.4,4.4,0,0,0,1.88.44,4.24,4.24,0,1,0,0-8.47Z" />
 						<path d="M23,16.55a4.29,4.29,0,0,0-2.11.56,14.5,14.5,0,0,1,4.35-6,1.1,1.1,0,1,0-1.39-1.7c-4,3.25-5.78,7.75-5.78,10.54a5.08,5.08,0,0,0,3,4.61A4.37,4.37,0,0,0,23,25a4.24,4.24,0,1,0,0-8.47Z" />
 					</svg>
 				</div>
-				<div className="text-lg text-center uppercase px-16">
+				<div className="text-lg text-center uppercase max-w-[280px] mx-auto px-4">
 					Блог для тех, кто хочет перестать заслуживать любовь и поверить, что с ними всё так 💔
 				</div>
 				<div className="text-right mb-5 px-10">
@@ -57,10 +57,10 @@ export default function HomePage() {
 				</div>
 				
 
-				<div className="text-center my-4 px-8">
+				<div className="text-center my-4 px-4">
 					<Link
-						className='rounded-full bg-[#C8D9EB] border border-black text-xl leading-5 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 px-8 py-5 inline-flex flex-row justify-center items-center gap-2'
-						href='https://t.me/zapiski_ot_di'
+						className='rounded-full bg-[#C8D9EB] border border-black text-xl leading-5 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 px-6 py-5 inline-flex flex-row justify-center items-center gap-2'
+						href='https://t.me/zapiski_ot_di/25'
 					>
 						<span className='text-md'>перейти в телеграм</span>
 						<svg className='w-6 h-6 fill-black' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
