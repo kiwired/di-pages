@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
+import { ScrollReveal } from './scroll-reveal'
 
 const evolventa = localFont({
 	src: [
@@ -25,30 +26,54 @@ export default function HomePage() {
 		<main className={classes}>
 			<div className="flex flex-col max-w-sm mx-auto gap-10">
 
-				<ul className='flex flex-col gap-12'>
-					<li className='bg-white flex flex-col items-center ml-auto max-w-[280px] text-sm text-center p-4 rounded-md'>
-						<div className="bg-white rounded-full -mt-10">
-							<Divider />
-						</div>
-						<span>Как быть в отношениях собой, если постоянно испытываешь недоверие: <b><i>а примут ли тебя?</i></b> <br /><b><i>а не отвернутся ли от тебя?</i></b></span>
-					</li>
-					<li className='bg-white flex flex-col items-center max-w-[280px] text-sm text-center p-4 rounded-md'>
-						<div className="bg-white rounded-full -mt-10">
-							<Divider />
-						</div>
-						<span>Как перестать ставить себя <br />на второе место и <b><i>терпеть неудобное?</i></b></span>
-					</li>
-					<li className='bg-white flex flex-col items-center ml-auto max-w-[280px] text-sm text-center p-4 rounded-md'>
-						<div className="bg-white rounded-full -mt-10">
-							<Divider />
-						</div>
-						<span>Что нужно проработать «хорошим» девочкам, чтобы выстраивать счастливые отношения, в которых <b><i>можно быть собой</i></b>?</span>
-					</li>
-				</ul>
+				<Image
+					src='./home/line-1.svg'
+					alt=''
+					width={371}
+					height={95}
+					className='absolute top-24 left-0 z-0 w-max-full w-auto h-8 -rotate-12'
+				/>
 
-				<div className="text-center">
-					Ответы на эти вопросы ты найдешь в авторском блоге
+				<Image
+					src='./home/line-1.svg'
+					alt=''
+					width={371}
+					height={95}
+					className='absolute top-96 right-0 z-0 w-max-full w-auto h-9 rotate-12'
+				/>
+
+				<div className='relative z-10 flex flex-col gap-12'>
+					<ScrollReveal>
+						<div className='bg-white flex flex-col items-center ml-auto max-w-[280px] text-sm text-center p-4 rounded-md'>
+							<div className="bg-white rounded-full -mt-10">
+								<Divider />
+							</div>
+							<span>Как быть в отношениях собой, если постоянно испытываешь недоверие: <b><i>а примут ли тебя?</i></b> <br /><b><i>а не отвернутся ли от тебя?</i></b></span>
+						</div>
+					</ScrollReveal>
+					<ScrollReveal delay={300}>
+						<div className='bg-white del flex flex-col items-center max-w-[280px] text-sm text-center p-4 rounded-md'>
+							<div className="bg-white rounded-full -mt-10">
+								<Divider />
+							</div>
+							<span>Как перестать ставить себя <br />на второе место и <b><i>терпеть неудобное?</i></b></span>
+						</div>
+					</ScrollReveal>
+					<ScrollReveal delay={500}>
+						<div className='bg-white flex flex-col items-center ml-auto max-w-[280px] text-sm text-center p-4 rounded-md'>
+							<div className="bg-white rounded-full -mt-10">
+								<Divider />
+							</div>
+							<span>Что нужно проработать «хорошим» девочкам, чтобы выстраивать счастливые отношения, в которых <b><i>можно быть собой</i></b>?</span>
+						</div>
+					</ScrollReveal>
 				</div>
+
+				<ScrollReveal delay={1000}>
+					<div className="text-center">
+						Ответы на эти вопросы ты найдешь в авторском блоге
+					</div>
+				</ScrollReveal>
 
 				<div className="bg-white flex flex-col gap-5 pb-5 rounded-md rounded-tl-3xl">
 					<div className="flex flex-row items-center -mt-4">
@@ -85,19 +110,31 @@ export default function HomePage() {
 					</div>
 
 					<div className="text-center px-4">
-						<Link
-							className='rounded-full bg-[#C8D9EB] border border-black text-xl leading-5 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 px-6 py-5 inline-flex flex-row justify-center items-center gap-2'
-							href='https://t.me/zapiski_ot_di/25'
-						>
-							<span className='text-md'>перейти в телеграм</span>
-							<svg className='w-6 h-6 fill-black' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-								<path d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z" />
-							</svg>
-						</Link>
+						<div className="relative inline-block">
+							<span className="animate-ping-btn absolute inset-0 bg-[#C8D9EB] rounded-full opacity-75"></span>
+							<Link
+								className='relative rounded-full bg-[#C8D9EB] border border-black text-xl leading-5 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 px-6 py-5 inline-flex flex-row justify-center items-center gap-2'
+								href='https://t.me/zapiski_ot_di/25'
+							>
+								<span className='text-md'>перейти в телеграм</span>
+								<svg className='w-6 h-6 fill-black' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+									<path d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z" />
+								</svg>
+							</Link>
+						</div>
 						<div className="text-sm text-center uppercase pt-2 px-8">
 							от психолога, гештальт-терапевта Дианы Поздняковой
 						</div>
 					</div>
+				</div>
+
+				<h2 className='text-center text-xl'>Отзывы</h2>
+
+				<div className="flex flex-col gap-5">
+					<Image src='./home/review-01.jpeg' alt='' width={1} height={1} className='w-max-full w-auto' />
+					<Image src='./home/review-02.jpeg' alt='' width={1} height={1} className='w-max-full w-auto ml-auto' />
+					<Image src='./home/review-03.jpeg' alt='' width={1} height={1} className='w-max-full w-auto' />
+					<Image src='./home/review-04.jpeg' alt='' width={1} height={1} className='w-max-full w-auto ml-auto' />
 				</div>
 
 			</div>
