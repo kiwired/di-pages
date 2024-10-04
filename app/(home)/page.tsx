@@ -20,12 +20,12 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
-	const classes = clsx(evolventa.className, 'bg-[#E3E2DD] bg-gray-200 p-5')
+	const classes = clsx(evolventa.className, 'bg-[#E3E2DD] bg-gray-200 p-5 pt-32')
 	return (
 		<main className={classes}>
 			<div className="flex flex-col max-w-sm mx-auto gap-10">
 
-				<ul className='flex flex-col gap-12 my-5'>
+				<ul className='flex flex-col gap-12'>
 					<li className='bg-white flex flex-col items-center ml-auto max-w-[280px] text-sm text-center p-4 rounded-md'>
 						<div className="bg-white rounded-full -mt-10">
 							<Divider />
@@ -45,6 +45,10 @@ export default function HomePage() {
 						<span>Что нужно проработать «хорошим» девочкам, чтобы выстраивать счастливые отношения, в которых <b><i>можно быть собой</i></b>?</span>
 					</li>
 				</ul>
+
+				<div className="text-center">
+					Ответы на эти вопросы ты найдешь в авторском блоге
+				</div>
 
 				<div className="bg-white flex flex-col gap-5 pb-5 rounded-md rounded-tl-3xl">
 					<div className="flex flex-row items-center -mt-4">
