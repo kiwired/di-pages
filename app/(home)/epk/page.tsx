@@ -12,6 +12,31 @@ export default function HomePage() {
 		<main className='bg-gray-200 p-5 pt-16'>
 			<div className="flex flex-col max-w-sm mx-auto gap-10">
 
+				<div className='relative z-10 flex flex-col gap-12'>
+					<div className='bg-white flex flex-col items-center ml-auto max-w-[280px] text-sm text-center p-4 rounded-md'>
+						<div className="bg-white rounded-full -mt-10">
+							<Divider />
+						</div>
+						<span>Как быть в отношениях собой, если постоянно испытываешь недоверие: <b><i>а примут ли тебя?</i></b> <br /><b><i>а не отвернутся ли от тебя?</i></b></span>
+					</div>
+					<div className='bg-white del flex flex-col items-center max-w-[280px] text-sm text-center p-4 rounded-md'>
+						<div className="bg-white rounded-full -mt-10">
+							<Divider />
+						</div>
+						<span>Как перестать ставить себя <br />на второе место и <b><i>терпеть неудобное?</i></b></span>
+					</div>
+					<div className='bg-white flex flex-col items-center ml-auto max-w-[280px] text-sm text-center p-4 rounded-md'>
+						<div className="bg-white rounded-full -mt-10">
+							<Divider />
+						</div>
+						<span>Что нужно проработать «хорошим» девочкам, чтобы выстраивать счастливые отношения, в которых <b><i>можно быть собой</i></b>?</span>
+					</div>
+				</div>
+
+				<div className="text-center">
+					Ответы на эти вопросы ты найдешь в авторском блоге
+				</div>
+
 				<div className="bg-white flex flex-col gap-5 pb-5 rounded-md rounded-tl-3xl">
 					<div className="flex flex-row items-center -mt-4">
 						<div className="basis-2/5">
@@ -50,7 +75,7 @@ export default function HomePage() {
 						<div className="relative inline-block">
 							<Link
 								className='relative rounded-full bg-[#C8D9EB] border border-black text-xl leading-5 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 px-6 py-5 inline-flex flex-row justify-center items-center gap-2'
-								href='https://t.me/zapiski_ot_di/25'
+								href='https://t.me/+2dd52M-z9yI4ZjMy'
 							>
 								<span className='text-md'>перейти в телеграм</span>
 								<svg className='w-6 h-6 fill-black' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
