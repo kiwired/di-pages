@@ -49,6 +49,12 @@ export default function RootLayout({
           `}
         </Script>
 
+        <Script
+          id="yandex-tg"
+          strategy='afterInteractive'
+          src="https://api.tgtrack.ru/API/landing_script/v1/?linkID=8d554f07762fd&chat=zapiski_ot_di&type=ya&counterID=346990912"
+        />
+
         <noscript>
           <div>
             <img src="https://mc.yandex.ru/watch/98511387" style={{ position: 'absolute', left: '-9999px' }} alt="" />
