@@ -7,6 +7,11 @@ const evolventa = localFont({
 			weight: '400',
 			style: 'normal',
 		},
+		{
+			path: './fonts/Evolventa-Bold.woff',
+			weight: '600',
+			style: 'normal',
+		},
 	]
 })
 
