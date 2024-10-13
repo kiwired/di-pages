@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
 	return (
-		<main className='bg-gray-200 p-5 py-10'>
+		<main className='bg-[#E3E2DE] p-5 py-10'>
 			<div className="flex flex-col max-w-sm mx-auto gap-10">
 
 				<div className="">
-					<p className='uppercase text-center'>Психологический блог</p>
+					<p className='text-center'>психологический блог</p>
 					<h1 className='text-4xl font-semibold text-[#6B7D95] text-center'>Плохие люди</h1>
-					<p className='text-base text-center mt-1'>в котором ты узнаешь, как строить отношения без самопожертвования, перестать заслуживать любовь и начать ставить себя на первое место без чувства вины и стыда</p>
+					<p className='bg-white rounded-2xl text-base text-center mt-2 p-5 hyphens-auto'>как <b>строить отношения без самопожертвования</b>, перестать заслуживать любовь и начать ставить себя на первое место <b>без чувства вины и стыда</b></p>
 				</div>
 
 				<div className="">
