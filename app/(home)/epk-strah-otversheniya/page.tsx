@@ -34,7 +34,7 @@ export default function HomePage() {
 						</li>
 						<li className="flex items-start gap-2">
 							<MinusIcon className="mt-1 w-5" />
-							<span className="flex-1">Замечали ли вы со собой такой паттерн: чувствуя малейшее <b>отвержение</b>, вы первые отворачиваетесь и дистанцируетесь?</span>
+							<span className="flex-1">Замечали ли вы за собой такой паттерн: чувствуя малейшее <b>отвержение</b>, вы первые отворачиваетесь и дистанцируетесь?</span>
 						</li>
 						<li className="flex items-start gap-2">
 							<MinusIcon className="mt-1 w-5" />
