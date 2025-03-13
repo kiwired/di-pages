@@ -46,7 +46,7 @@ export default function HomePage() {
 				<div className="text-center">
 					<Link
 						className='relative rounded-full bg-[#C8D9EB] border border-black text-xl leading-5 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 px-6 py-5 inline-flex flex-row justify-center items-center gap-2'
-						href='https://t.me/+yD5v36n1xrI2ZDRi'
+						href='https://t.me/+H_yKEVJxkoQyY2M6'
 					>
 						<span className='text-md'>перейти в телеграм</span>
 						<svg className='w-6 h-6 fill-black' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
