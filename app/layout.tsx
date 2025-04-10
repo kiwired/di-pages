@@ -51,7 +51,7 @@ export default function RootLayout({
 
         <Script
           id="yandex-tg"
-          strategy='afterInteractive'
+          strategy='beforeInteractive'
           src="https://api.tgtrack.ru/API/landing_script/v1/?linkID=544e643dddea1&chat=zapiski_ot_di&type=ya&counterID=98511387"
         />
 
