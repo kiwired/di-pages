@@ -52,7 +52,7 @@ export default function RootLayout({
         <Script
           id="yandex-tg"
           strategy='afterInteractive'
-          src="https://api.tgtrack.ru/API/landing_script/v1/?linkID=8d554f07762fd&chat=zapiski_ot_di&type=ya&counterID=346990912"
+          src="https://api.tgtrack.ru/API/landing_script/v1/?linkID=544e643dddea1&chat=zapiski_ot_di&type=ya&counterID=98511387"
         />
 
         <noscript>
