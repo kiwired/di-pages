@@ -15,7 +15,7 @@ export const CTAWelcome = ({ title, children }: CTAWelcomeProps) => {
 				<div>
 					<Image src='/epk/tg-preview.jpg' alt="" width={320} height={320} className="w-full max-w-[110px] h-auto mx-auto rounded-full" />
 					<h3 className="text-xl font-bold mt-3">Плохие люди | психология</h3>
-					<p className="text-sm text-gray-500">790 подписчиков</p>
+					<p className="text-sm text-gray-500">510 подписчиков</p>
 				</div>
 				{/* <p>Как справиться с <b>внутренним критиком</b> и <b>страхом отвержения</b>, научиться ценить себя и <b>снизить тревожность</b>, перестать быть "хорошей" и начать ставить себя на первое место без чувства вины и стыда</p> */}
 				<p>Здесь ты сможешь <b>исследовать</b> свой страх <b>отвержения и оценки</b>, а также понять, что на глубинном уровне мешает тебе почувствать себя уверенной и ценной</p>
